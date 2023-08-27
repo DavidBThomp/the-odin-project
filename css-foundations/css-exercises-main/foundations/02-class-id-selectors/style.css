@@ -1,0 +1,19 @@
+.number1,
+.number3 {
+  background-color: red;
+}
+
+#number2 {
+  color: blue;
+  font-size: 44px;
+}
+
+.number3 {
+  font-size: 30px;
+}
+
+#number4 {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: greenyellow;
+}
