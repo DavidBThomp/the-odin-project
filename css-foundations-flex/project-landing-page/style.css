@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bg-dark {
+  background-color: #1f2937;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-title {
+  margin: 0 auto 0 0;
+  font-size: 32px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li {
+  padding: 20px;
+  font-size: 24px;
+}
+
+img {
+  width: 500px;
+  height: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.left-section {
+  flex: 0 0 650px;
+}
+
+button {
+  background-color: #3882f6;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.reasons-4 img {
+  width: 200px;
+  height: 200px;
+  border: #1f2937 solid 5px;
+  border-radius: 10px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-text {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+}
+
+.quote-section {
+  font-size: 36px;
+  font-style: italic;
+  color: #1f2937;
+  max-width: 1000px;
+}
+
+.quote-container {
+  background-color: #e5e7eb;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #3882f6;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.cta-container > div {
+  padding: 20px;
+}
+
+.cta-container button {
+  max-width: 200px;
+  border: white solid 2px;
+}
+
+.cta-container p,
+.cta-container h1 {
+  margin: 3px 0;
+  max-width: 500px;
+}
+
+footer {
+  padding: 50px 0;
+  margin: 50px 0 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #1f2937;
+  color: white;
+}
