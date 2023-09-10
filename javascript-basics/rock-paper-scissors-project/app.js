@@ -34,27 +34,45 @@ function playSingleGame(
 ) {
   if (playerChoice === "Input not recognized.") {
     console.log(playerChoice);
-  } else if (playerChoice === "Rock" && computerChoice === "Scissor") {
-    console.log("Player Wins! Your Rock beats Scissor.");
-  } else if (playerChoice === "Paper" && computerChoice === "Rock") {
-    console.log("Player Wins! Your Paper beats Rock.");
-  } else if (playerChoice === "Scissor" && computerChoice === "Paper") {
-    console.log("Player Wins! Your Scissor beats Paper.");
+    playSingleGame();
+  } else if (
+    (playerChoice === "Rock" && computerChoice === "Scissor") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Scissor" && computerChoice === "Paper")
+  ) {
+    console.log(`Player Wins! Your ${playerChoice} beats ${computerChoice}.`);
+    return "playerWin";
   } else if (playerChoice === computerChoice) {
     console.log("It's a tie!");
+    return "tie";
   } else {
     console.log(
       `Computer Wins, as always. Computers ${computerChoice} beats ${playerChoice}.`
     );
+    return "computerWin";
   }
 }
 
 function playGame() {
   let rounds = Number(prompt("How many rounds do you want to play?"));
+  let playerWins = 0;
+  let computerWins = 0;
+  let tie = 0;
   let i = 0;
-  while (i != rounds) {
-    playSingleGame();
+
+  while (i < rounds) {
+    i++;
+    let game = playSingleGame();
+
+    if (game === "playerWin") {
+      playerWins++;
+    } else if (game === "computerWin") {
+      computerWins++;
+    } else if (game === "tie") {
+      tie++;
+    }
+    console.log(`Score: W:${playerWins} L:${computerWins} T:${tie}`);
   }
 }
 
-playSingleGame();
+playGame();
