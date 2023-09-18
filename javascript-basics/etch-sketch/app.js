@@ -46,10 +46,14 @@ function squareHover() {
   const square = document.querySelectorAll(".square");
   square.forEach((square) => {
     square.addEventListener("mouseover", (e) => {
-      e.target.style.backgroundColor = "grey";
+      e.target.style.backgroundColor = `rgb( ${random255()},${random255()} ,${random255()})`;
       console.log(`hover`);
     });
   });
+}
+
+function random255() {
+  return Math.random() * 255 - +1;
 }
 
 makeDivs();
