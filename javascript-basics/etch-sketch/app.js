@@ -7,10 +7,14 @@ body.appendChild(div);
 
 // Hover Div
 div.addEventListener("mouseover", (e) => {
-  console.log(e);
+  e.target.style.backgroundColor = "red";
 });
 
-function makeDiv() {
+// New Grid Button
+const button = document.querySelector("#new-button");
+button.addEventListener("click", makeGrid);
+
+function makeDivs() {
   const sketchContainer = document.querySelector(".sketch-container");
   for (let i = 0; i < 16 * 16; i++) {
     const div = document.createElement("div");
@@ -19,6 +23,8 @@ function makeDiv() {
   }
 }
 
-function makeColor() {}
+function makeGrid() {
+  console.log("Connected to Button!");
+}
 
-makeDiv();
+makeDivs();
