@@ -31,7 +31,10 @@ function displayEquation(e) {
     operator = inputData;
   } else if (operator) {
     op2 += inputData;
-    screen.innerText = inputData;
+    if (screen.innerText === op1) {
+      screen.innerText = ``;
+    }
+    screen.innerText += inputData;
   } else {
     op1 += inputData;
     screen.innerText += inputData;
