@@ -1,6 +1,6 @@
 const findTheOldest = function (arr) {
   const oldest = arr.reduce((item) => {
-    getOldest;
+    getOldest();
     item.yearOfDeath - item.yearOfDeath;
   });
   return oldest;

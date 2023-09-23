@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  display: inline-block;
+}
+
+.screen {
+  height: 25px;
+  background-color: greenyellow;
+}
+
+.button {
+  margin: 5px;
+  padding: 10px;
+}
