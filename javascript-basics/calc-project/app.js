@@ -18,10 +18,23 @@ function displayEquation(e) {
 
   if (inputData === "Clear") {
     clearData();
+  } else if (
+    inputData === "=" && !op1||
+    inputData === "/" && !op1||
+    inputData === "-" && !op1||
+    inputData === "+" && !op1||
+    inputData === "*" && !op1
+  ) {
+    screen.innerText = `Invalid First Input`;
   } else if (inputData === "=") {
     operate(+op1, +op2, operator);
+    if (screen.innerText === `Infinity`) {
+      clearData();
+      screen.innerText = `Le Epic Fail`
+    } else {
     op1 = String(screen.innerText);
     op2 = ``;
+    }
   } else if (
     inputData === "/" ||
     inputData === "-" ||
@@ -30,9 +43,14 @@ function displayEquation(e) {
   ) {
     if (op1 && op2) {
       operate(+op1, +op2, operator);
+          if (screen.innerText === `Infinity`) {
+            clearData();
+      screen.innerText = `Le Epic Fail`
+    } else {
       op1 = String(screen.innerText);
       op2 = ``;
       operator = inputData;
+    }
     }
     operator = inputData;
   } else if (operator) {
@@ -42,6 +60,7 @@ function displayEquation(e) {
     }
     screen.innerText += inputData;
   } else {
+    clearData();
     op1 += inputData;
     screen.innerText += inputData;
   }
@@ -57,13 +76,13 @@ function operate(op1, op2, operator) {
   const screen = document.querySelector(".screen");
 
   if (operator === "+") {
-    screen.innerText = add(op1, op2).toFixed(6);
+    screen.innerText = parseFloat(add(op1, op2).toFixed(6));
   } else if (operator === "-") {
-    screen.innerText = subtract(op1, op2).toFixed(6);
+    screen.innerText = parseFloat(subtract(op1, op2).toFixed(6));
   } else if (operator === "*") {
-    screen.innerText = multiply(op1, op2).toFixed(6);
+    screen.innerText = parseFloat(multiply(op1, op2).toFixed(6));
   } else if (operator === "/") {
-    screen.innerText = divide(op1, op2).toFixed(6);
+    screen.innerText = parseFloat(divide(op1, op2).toFixed(6));
   } else {
     screen.innerText = "Operation Failed!";
   }
