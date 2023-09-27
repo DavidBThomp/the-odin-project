@@ -28,6 +28,12 @@ function displayEquation(e) {
     inputData === "+" ||
     inputData === "*"
   ) {
+    if (op1 && op2) {
+      operate(+op1, +op2, operator);
+      op1 = String(screen.innerText);
+      op2 = ``;
+      operator = inputData;
+    }
     operator = inputData;
   } else if (operator) {
     op2 += inputData;
@@ -51,13 +57,13 @@ function operate(op1, op2, operator) {
   const screen = document.querySelector(".screen");
 
   if (operator === "+") {
-    screen.innerText = add(op1, op2);
+    screen.innerText = add(op1, op2).toFixed(6);
   } else if (operator === "-") {
-    screen.innerText = subtract(op1, op2);
+    screen.innerText = subtract(op1, op2).toFixed(6);
   } else if (operator === "*") {
-    screen.innerText = multiply(op1, op2);
+    screen.innerText = multiply(op1, op2).toFixed(6);
   } else if (operator === "/") {
-    screen.innerText = divide(op1, op2);
+    screen.innerText = divide(op1, op2).toFixed(6);
   } else {
     screen.innerText = "Operation Failed!";
   }
