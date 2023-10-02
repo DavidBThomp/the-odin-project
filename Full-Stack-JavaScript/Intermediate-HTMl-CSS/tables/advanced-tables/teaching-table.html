@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>School timetable</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
+
+      td,
+      th {
+        border: 1px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      caption {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>School timetable</h1>
+
+    <table>
+      <caption>
+        Classes this week I teach
+      </caption>
+      <colgroup>
+        <col />
+        <col />
+        <col style="background-color: #97db9a" />
+        <col style="width: 42px" />
+        <col style="background-color: #97db9a" />
+        <col style="background-color: #dcc48e; border: 4px solid #c1437a" />
+        <col style="width: 42px" />
+        <col style="width: 42px" />
+      </colgroup>
+      <tr>
+        <td>&nbsp;</td>
+        <th id="mon">Mon</th>
+        <th id="tues">Tues</th>
+        <th id="wed">Wed</th>
+        <th id="thurs">Thurs</th>
+        <th id="fri">Fri</th>
+        <th id="sat">Sat</th>
+        <th id="sun">Sun</th>
+      </tr>
+      <tr>
+        <th id="p1">1st period</th>
+        <td id="mon p1">English</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td id="thurs p1">German</td>
+        <td id="fri p1">Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th id="p2">2nd period</th>
+        <td id="mon p2">English</td>
+        <td id="tues p2">English</td>
+        <td>&nbsp;</td>
+        <td id="thurs p2">German</td>
+        <td id="fri p2">Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th id="p3">3rd period</th>
+        <td>&nbsp;</td>
+        <td id="tues p3">German</td>
+        <td>&nbsp;</td>
+        <td id="thurs p3">German</td>
+        <td id="fri p3">Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th id="p4">4th period</th>
+        <td>&nbsp;</td>
+        <td id="tues p4">English</td>
+        <td>&nbsp;</td>
+        <td id="thurs p4">English</td>
+        <td id="fri p4">Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
