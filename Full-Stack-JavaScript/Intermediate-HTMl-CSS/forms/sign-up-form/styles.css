@@ -1,0 +1,45 @@
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Aside Content */
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  min-width: 500px;
+  background: url(./filip-zrnzevic-QsWG0kjPQRY-unsplash.jpg) #000 fixed bottom;
+}
+
+.aside-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+}
+
+/* Main Content */
+.main-content {
+  padding: 200px 100px;
+}
+
+.main-content > h1 {
+  max-width: 60ch;
+  margin: 0 0 30px 0;
+}
