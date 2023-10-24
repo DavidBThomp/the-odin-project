@@ -3,6 +3,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Sometype Mono", monospace;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .page-container {
@@ -26,7 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .logo {
@@ -36,10 +41,77 @@ body {
 
 /* Main Content */
 .main-content {
-  padding: 200px 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  flex-grow: 1;
 }
 
-.main-content > h1 {
+.padding-container {
+  padding: 20px 50px;
+}
+
+.main-content > h1,
+h2 {
   max-width: 60ch;
-  margin: 0 0 30px 0;
+}
+
+h2 {
+  margin: 30px 0 0 0;
+}
+
+.input-container {
+  display: flex;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: clamp(100px, 350px, 50%);
+}
+
+input {
+  padding: 5px 5px;
+  border: #e5e7eb 2px solid;
+  border-radius: 5px;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+.form-background {
+  background-color: sandybrown;
+  width: 100%;
+}
+
+.submit-btn {
+  margin: 20px 0 0 50px;
+  padding: 20px 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #596d48;
+  border-radius: 15px;
+  border: black 2px solid;
+}
+
+.login {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.password,
+.password-confirm {
+  border: red 2px solid;
+}
+
+input:focus {
+  border: 2px solid lightblue;
+  outline: none;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
 }

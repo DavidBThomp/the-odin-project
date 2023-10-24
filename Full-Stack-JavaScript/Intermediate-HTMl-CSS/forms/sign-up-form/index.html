@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -16,42 +22,61 @@
           </div>
         </div>
         <div class="main-content">
-          <h1>
-            This is not a real online service. Please use fake information.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h1>
+          <div class="padding-container">
+            <h1>
+              This is not a real online service. Please use fake information.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h1>
 
-          <h2>Check out this validation!</h2>
+            <h2>Check out <span class="italic">this</span> validation!</h2>
+          </div>
 
-          <form action="/index" method="post">
-            <div>
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" />
+          <form action="/index" method="post" class="">
+            <div class="form-background padding-container">
+              <div class="input-container">
+                <div class="input">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" />
+                </div>
+                <div class="input">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" />
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input">
+                  <label for="user-email">Email</label>
+                  <input type="email" id="user-email" />
+                </div>
+                <div class="input">
+                  <label for="user-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="user-phone"
+                    placeholder="(123)456-7890"
+                  />
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input">
+                  <label for="user-password">Password</label>
+                  <input type="text" id="user-password" class="password" />
+                </div>
+                <div class="input">
+                  <label for="user-password-confirm">Confirm Password</label>
+                  <input
+                    type="text"
+                    id="user-password-confirm"
+                    class="password-confirm"
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" />
-            </div>
-            <div>
-              <label for="user-email">Email</label>
-              <input type="email" id="user-email" />
-            </div>
-            <div>
-              <label for="user-phone">Phone Number</label>
-              <input type="tel" id="user-phone" placeholder="(123)456-7890" />
-            </div>
-            <div>
-              <label for="user-password">Password</label>
-              <input type="text" id="user-password" />
-            </div>
-            <div>
-              <label for="user-password-confirm">Confirm Password</label>
-              <input type="text" id="user-password-confirm" />
-            </div>
-
-            <button type="submit">Create Account</button>
+            <button type="submit" class="submit-btn">Create Account</button>
           </form>
-          <p>Already have an account? <a href="#">Login in</a></p>
+          <p class="padding-container">
+            Already have an account? <a href="#" class="login">Login in</a>
+          </p>
         </div>
       </div>
     </main>
