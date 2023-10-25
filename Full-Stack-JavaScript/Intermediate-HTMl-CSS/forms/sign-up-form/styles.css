@@ -85,7 +85,7 @@ label {
 }
 
 .form-background {
-  background-color: sandybrown;
+  background-color: rgb(240, 240, 240);
   width: 100%;
 }
 
@@ -114,4 +114,22 @@ input:focus {
   border: 2px solid lightblue;
   outline: none;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:required:focus {
+  border: 2px solid lightblue;
+}
+
+/* This style needs to apply when Javascript checks validity */
+/* input:required:valid {
+  border: 2px green solid;
+} */
+
+.password-match {
+  display: none;
+}
+
+.required {
+  font-size: 10px;
+  color: gray;
 }

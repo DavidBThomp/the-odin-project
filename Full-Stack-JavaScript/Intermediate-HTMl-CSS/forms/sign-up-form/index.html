@@ -31,7 +31,7 @@
             <h2>Check out <span class="italic">this</span> validation!</h2>
           </div>
 
-          <form action="/index" method="post" class="">
+          <form action="" method="post" class="">
             <div class="form-background padding-container">
               <div class="input-container">
                 <div class="input">
@@ -45,8 +45,10 @@
               </div>
               <div class="input-container">
                 <div class="input">
-                  <label for="user-email">Email</label>
-                  <input type="email" id="user-email" />
+                  <label for="user-email"
+                    >Email*<span class="required">(Required)</span></label
+                  >
+                  <input type="email" id="user-email" required />
                 </div>
                 <div class="input">
                   <label for="user-phone">Phone Number</label>
@@ -59,16 +61,29 @@
               </div>
               <div class="input-container">
                 <div class="input">
-                  <label for="user-password">Password</label>
-                  <input type="text" id="user-password" class="password" />
+                  <label for="user-password"
+                    >Password*<span class="required">(Required)</span></label
+                  >
+                  <input
+                    type="password"
+                    id="user-password"
+                    class="password"
+                    required
+                  />
                 </div>
                 <div class="input">
-                  <label for="user-password-confirm">Confirm Password</label>
+                  <label for="user-password-confirm"
+                    >Confirm Password*<span class="required"
+                      >(Required)</span
+                    ></label
+                  >
                   <input
-                    type="text"
+                    type="password"
                     id="user-password-confirm"
                     class="password-confirm"
+                    required
                   />
+                  <span class="password-match">Password Does not match</span>
                 </div>
               </div>
             </div>
@@ -80,5 +95,7 @@
         </div>
       </div>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
