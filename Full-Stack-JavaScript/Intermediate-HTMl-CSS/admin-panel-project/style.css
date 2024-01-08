@@ -16,6 +16,7 @@ main {
   display: grid;
   grid-row: 200px 1fr;
   gap: 20px;
+  height: 100%;
 }
 
 .text-logo {
@@ -49,6 +50,7 @@ aside li > a {
   font-size: 20px;
   text-decoration: none;
   color: black;
+  gap: 5px;
 }
 
 aside li > a:hover {
@@ -57,4 +59,52 @@ aside li > a:hover {
 
 aside {
   padding: 5px;
+}
+
+form > div {
+  display: grid;
+  grid-template-columns: 30px 600px;
+  gap: 10px;
+}
+
+.top-section {
+  padding: 30px;
+}
+
+input#search {
+  border-radius: 50px;
+}
+
+.top-row1 {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.top-row1-right {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: end;
+}
+
+.top-section p {
+  display: inline-block;
+}
+
+.top-row2 {
+  margin: 30px 0 0 0;
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  grid-template-columns: 60px 2fr 1fr;
+}
+
+.top-row2 p,
+.top-row2 h2 {
+  margin: 0;
+}
+
+#button-group-top {
+  justify-self: end;
 }
